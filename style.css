@@ -1,0 +1,156 @@
+/* Base styles */
+
+body {
+    font-family: Georgia, serif;
+    margin: 0;
+    padding: 0;
+    transition: background 0.4s, color 0.4s;
+}
+
+.light-mode {
+    background: linear-gradient(to right, #fbc7a4, #fe4a49);
+    color: #222;
+}
+
+.dark-mode {
+    background: linear-gradient(to right, #0f2027, #06455a, #202c31);
+    color: #f0f0f0;
+}
+
+.container {
+    text-align: center;
+    padding: 2rem;
+    margin: 50px auto;
+    width: 90%;
+    max-width: 500px;
+    background: #fceadd;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transition: background 0.4s;
+    border-radius: 2px solid;
+}
+
+.dark-mode .container {
+    background: rgba(88, 185, 241, 0.4);
+}
+
+input {
+    padding: 10px;
+    font-size: 1rem;
+    width: 80%;
+    margin: 10px auto;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dark-mode button {
+    background: #06455a;
+    color: #ccc;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background: #fe4a49;
+    color: black;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.3s;
+}
+
+button:hover {
+    background: #80f0f8;
+    transform: scale(1.05);
+}
+
+.result-box {
+    margin-top: 20px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.result-box img {
+    width: 200px;
+    margin-top: 10px;
+    border-radius: 10px;
+    transition: transform 0.5s;
+}
+
+.result-box img:hover {
+    transform: scale(1.1);
+    justify-content: center;
+}
+
+.emoji {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Toggle switch */
+
+.toggle-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    border-radius: 24px;
+    transition: 0.4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    border-radius: 50%;
+    transition: 0.4s;
+}
+
+input:checked+.slider {
+    background-color: #66bb6a;
+}
+
+input:checked+.slider:before {
+    transform: translateX(26px);
+}
