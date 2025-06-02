@@ -1,5 +1,7 @@
 # Mood Booster Game 🌞
 https://laharik09.github.io/mood-booster/
+
+
 A simple, fun web game that instantly brightens your mood with uplifting messages and emojis!
 
 ## About
